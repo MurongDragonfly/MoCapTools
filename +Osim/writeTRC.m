@@ -60,7 +60,7 @@ function trcFile = writeTRC(trcTable, varargin)
 	
     text{1} = sprintf('PathFileType\t3\t(X/Y/Z)\t%s', trcFile);
 	text{2} = strjoin({'DataRate','CameraRate','NumFrames','NumMarkers','Units','OrigDataRate','OrigDataStartFrame','OrigNumFrames'}, '\t');
-    text{3} = sprintf('%4$d	%4$d	%1$d	%2$d	mm	%4$d	%3$d	%1$d	', size(data, 1), nMarkers, data(1, 1), fs);
+    text{3} = sprintf('%4$d	%4$d	%1$d	%2$d	mm	%4$d	%3$d	%1$d', size(data, 1), nMarkers, data(1, 1), fs);
     
     varNames = [{'Frame#','Time'},markerNames];
     text{4} = sprintf('%s\t', strjoin(varNames, '\t'));
